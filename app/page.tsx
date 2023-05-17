@@ -1,9 +1,212 @@
-import React from 'react';
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import Button from '@components/Button/Button'
+import ExperienceCard from '@components/Card/ExperienceCard'
+import {
+  PersonalImage,
+  UniversityImage,
+  ReactLogoImage,
+  NextLogoImage,
+  GitLogoImage,
+  PostgresLogoImage,
+  SpringBootLogoImage,
+  WorkflowDesign,
+  SmartDoorDesign,
+  LinkedInLogo,
+  GmailLogo,
+  GithubLogo,
+  MediumLogo,
+} from '@assets'
+import ContactCard from '@components/Card/ContactCard'
+import ImageButton from '@components/Button/ImageButton'
 
-type Props = {};
+type Props = {}
 
-const page = (props: Props) => {
-	return <div>page</div>;
-};
+const programmingSkillLogo = [
+  NextLogoImage,
+  ReactLogoImage,
+  GitLogoImage,
+  SpringBootLogoImage,
+  PostgresLogoImage,
+]
 
-export default page;
+const experiences = [
+  {
+    title: 'Software Engineer',
+    subtitle: 'at Qualint Co.Ltd',
+    description:
+      'Create website with parallax concept, then  optimize SEO for search engine web crawler and create backend service with microservice architecture, then deploy with DevOps team for high availability and best user experience.',
+    onClick: () => {
+      console.log('Software Engineer Click!')
+    },
+    src: WorkflowDesign.src,
+    alt: 'Mrtripop experience with Software Engineer',
+  },
+
+  {
+    title: 'Computer Engineering',
+    subtitle: 'at Naresuan University',
+    description:
+      'Modify door lock using IoT technology and control it two way. First, control by key card(default by door lock). Second, control by application which I use Firebase to connect between application and Iot.',
+    onClick: () => {
+      console.log('Computer Engineering Click!')
+    },
+    src: SmartDoorDesign.src,
+    alt: 'Mrtripop experience with Computer Engineering',
+  },
+]
+
+const contacts = [
+  {
+    contact: 'tripop.chai12@gmail.com',
+    textButton: 'Send Email',
+    src: GmailLogo.src,
+    onClick: () => {},
+  },
+  {
+    contact: 'Tripop Torcheep',
+    textButton: 'View Profile',
+    src: LinkedInLogo.src,
+    onClick: () => {},
+  },
+]
+
+const follows = [
+  {
+    src: GithubLogo.src,
+    alt: 'mrtripop gmail contact',
+    onClick: () => {},
+  },
+  {
+    src: MediumLogo.src,
+    alt: 'mrtripop github contact',
+    onClick: () => {},
+  },
+]
+
+const Home = (props: Props) => {
+  const resumeHandle = () => {}
+  return (
+    <div className="w-full">
+      {/* hero section */}
+      <section id="about" className="bg-dark-blue ">
+        <div className="container flex justify-between h-[1021px] ">
+          <div className="flex-1 overflow-hidden ">
+            <Image
+              src={PersonalImage}
+              alt="mrtripop-personal-image"
+              className="h-full w-fit pt-[64px]"
+            />
+          </div>
+          <div className="flex items-center justify-center flex-1">
+            <div className="w-[630px] h-[475px] flex flex-col justify-around ">
+              <h1 className="text-[64px] leading-[77px] drop-shadow-lg text-white ">
+                Tripop Torcheep
+              </h1>
+              <p className="text-2xl leading-10 tracking-widest text-white">
+                I’m interested in knowledge, how software go live to service
+                customer? So, Software Engineer can give answer since the
+                design, develop, deploy and maintenance service.
+              </p>
+              <Button text="resume" onClick={resumeHandle} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* graduate section */}
+      <section id="graduate" className="bg-dim-white">
+        <div className="flex container h-[464px] justify-around">
+          <div className="w-[570px] flex flex-col gap-5 justify-center">
+            <h2 className="text-5xl font-normal ">Graduated</h2>
+            <p className="text-2xl font-light ">
+              Graduated in bachelor degree in Computer Engineering at Naresuan
+              University with 2.83 GPA
+            </p>
+          </div>
+          <div className="flex items-center">
+            <Image src={UniversityImage} alt="mrtripop-university-image" />
+          </div>
+        </div>
+      </section>
+
+      {/* programming skill section */}
+      <section id="skill" className="bg-dark-blue ">
+        <div className="container flex justify-between py-16 ">
+          <div className="flex flex-col w-full gap-[80px] ">
+            <h2 className="text-5xl font-medium text-white text-center tracking-[0.08em]">
+              Programming Skills
+            </h2>
+            <div className="flex flex-row gap-[39px] align-center justify-center">
+              {programmingSkillLogo.map((logo, index) => (
+                <Image
+                  key={'mrtripop-skill-experience-' + index}
+                  width={160}
+                  height={160}
+                  src={logo}
+                  alt="mrtripop-skill-experience"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* experience section */}
+      <section id="experience" className="bg-dim-white">
+        <div className="container flex flex-col h-full gap-16 py-16">
+          <h2 className="text-5xl font-medium text-dark-blue text-center tracking-[0.08em]">
+            Experience
+          </h2>
+          {experiences.map((experience, index) => (
+            <ExperienceCard
+              key={index}
+              isImageLeft={index % 2 !== 0}
+              title={experience.title}
+              subtitle={experience.subtitle}
+              description={experience.description}
+              onClick={experience.onClick}
+              src={experience.src}
+              alt={experience.alt}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* contact section */}
+      <section id="contact" className="bg-dark-blue ">
+        <div className="container flex items-center justify-between h-[778px]">
+          {contacts.map((contact, index) => (
+            <ContactCard
+              key={index}
+              contact={contact.contact}
+              textButton={contact.textButton}
+              src={contact.src}
+              onClick={contact.onClick}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* follow section */}
+      <section id="follow" className="bg-dim-white">
+        <div className="container h-[500px] gap-10 flex flex-col items-center tracking-[0.08em] py-14 ">
+          <h1 className="text-5xl text-dark-blue">Follow me</h1>
+          <div className="flex items-center justify-center w-full h-full gap-60">
+            {follows.map((follow, index) => (
+              <ImageButton
+                alt={follow.alt}
+                key={index}
+                src={follow.src}
+                onClick={follow.onClick}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default Home

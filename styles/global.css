@@ -3,19 +3,9 @@
 @tailwind utilities;
 
 .container {
-  @apply w-full max-w-7xl my-0 mx-auto bg-red-500;
+  @apply w-full max-w-[1440px] mx-auto my-0;
 }
 
-/* *,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.nav-item {
+  @apply items-center justify-center w-full px-3 py-2 text-lg text-black rounded lg:inline-flex lg:w-auto hover:bg-black hover:text-white;
 }
-
-.container {
-  width: 100%;
-  max-width: 1980px;
-  margin: 0 auto;
-} */
