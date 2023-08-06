@@ -6,6 +6,17 @@
   @apply w-full max-w-[1440px] mx-auto my-0;
 }
 
+.layout {
+  @apply grid grid-cols-8 gap-5;
+}
+
 .nav-item {
   @apply items-center justify-center w-full px-3 py-2 text-lg text-black rounded lg:inline-flex lg:w-auto hover:bg-black hover:text-white;
+}
+
+.primary-gradient {
+  background: linear-gradient(150deg, #114357 0%, #f29492 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -11,3 +11,6 @@ export { default as GmailLogo } from './gmail-logo.png'
 export { default as LinkedInLogo } from './linkedin-logo.png'
 export { default as GithubLogo } from './github-logo.png'
 export { default as MediumLogo } from './medium-logo.png'
+
+export { default as BurgerIcon } from './burger.svg'
+export { default as BoyImage } from './boy-image.png'

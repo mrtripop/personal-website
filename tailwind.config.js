@@ -18,8 +18,11 @@ module.exports = {
       black: '#000000',
       'dim-black': '#010101',
       white: '#ffffff',
-      'dim-white': '#D9D9D9',
       gray: '#E5E5E5',
+      'white-mill': '#F6F6F6',
+      'dim-white': '#D9D9D9',
+      'dark-blue-green': '#114357',
+      pink: '#F29492',
     },
     fontFamily: {
       sans: ['Lato', 'sans-serif'],
