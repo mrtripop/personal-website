@@ -14,3 +14,6 @@ export { default as MediumLogo } from './medium-logo.png'
 
 export { default as BurgerIcon } from './burger.svg'
 export { default as BoyImage } from './boy-image.png'
+export { default as GithubImage } from './github-image.png'
+export { default as LinkedInImage } from './linkedin-image.png'
+export { default as MediumImage } from './medium-image.png'
