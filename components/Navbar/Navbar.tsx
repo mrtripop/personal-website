@@ -7,9 +7,7 @@ const Navbar = () => {
       <div className="container flex flex-wrap items-center justify-between w-full h-full px-8 backdrop-blur-md bg-dim-white bg-opacity-20">
         <IconsButton src={BoyImage.src} />
         <div className="h-[45px] w-[119px] rounded-full bg-white shadow-lg flex items-center justify-center">
-          <h2 className="text-lg font-bold leading-4 primary-gradient">
-            Mrtripop
-          </h2>
+          <h2 className="text-lg font-bold primary-gradient">Mrtripop</h2>
         </div>
         <IconsButton src={BurgerIcon.src} />
       </div>
