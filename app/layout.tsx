@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={lato.className}>
         <Navbar />
-        <main>{children}</main>
+        <main className="scroll-smooth">{children}</main>
         <Footer />
       </body>
     </html>
