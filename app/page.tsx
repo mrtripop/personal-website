@@ -37,7 +37,7 @@ const Home = (props: Props) => {
         </div>
         <div>
           <h1 className="text-5xl font-semibold text-center bg-pink primary-gradient drop-shadow">
-            Hi, I'm Tripop
+            Hi, I&#39;m Tripop
           </h1>
         </div>
         <div className="flex items-center gap-[0.5rem]">
