@@ -1,5 +1,7 @@
-import { LocationImage } from '@assets'
+import { LocationImage, TechStackImage } from '@assets'
 import BackgroundCircle from '@components/Circle/BackgroundCircle'
+import DotList from '@components/List/DotList'
+import { technologies } from '@data/experience'
 
 type Props = {}
 
@@ -14,7 +16,7 @@ const circle = {
 const Home = (props: Props) => {
   return (
     <div className="bg-white-mill">
-      <div className="container flex flex-col items-center justify-center w-full h-screen px-8 pt-20 gap-9">
+      <div className="container flex flex-col items-center justify-center w-full px-8 pt-24 pb-16 gap-9">
         <div className="relative w-full h-[3.75rem]">
           <BackgroundCircle
             style={{ ...circle }}
@@ -51,7 +53,7 @@ const Home = (props: Props) => {
             <h3 className="w-full text-base font-medium leading-[1.425rem] text-center ">
               Concept
             </h3>
-            <p className="text-center font-light text-base leading-[1.425rem] w-[15rem]">
+            <p className="text-center font-light text-base tracking-wide leading-[1.425rem] w-[16rem]">
               Learning the new tech stack and keep it current as much as
               possible
             </p>
@@ -60,6 +62,29 @@ const Home = (props: Props) => {
             <h3 className="w-full text-base font-medium leading-[1.425rem] text-center ">
               Happy coding!
             </h3>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center w-full gap-7">
+          <img
+            src={TechStackImage.src}
+            className="w-[100px]"
+            alt="Familiar with tech stack image"
+          />
+          <h2 className="text-4xl font-semibold tracking-wide text-center drop-shadow-lg secondary-gradient font-lato ">
+            Tech Stack
+          </h2>
+          <div className="flex items-center justify-center w-full bg-gray rounded-3xl">
+            <div className="flex flex-col gap-4 px-10 py-5 w-[318px] ">
+              <h3 className="font-normal tracking-wide font-lato">
+                Familiar with technology stack
+              </h3>
+              <div className="pl-2">
+                {technologies.map((dot) => (
+                  <DotList {...dot} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
