@@ -80,8 +80,8 @@ const Home = (props: Props) => {
                 Familiar with technology stack
               </h3>
               <div className="pl-2">
-                {technologies.map((dot) => (
-                  <DotList {...dot} />
+                {technologies.map((dot, index) => (
+                  <DotList {...dot} key={'technology-dot-list' + index} />
                 ))}
               </div>
             </div>
