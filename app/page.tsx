@@ -1,7 +1,9 @@
-import { LocationImage, TechStackImage } from '@assets'
+import { ExperienceImage, LocationImage, TechStackImage } from '@assets'
+import JobCard from '@components/Card/Job/JobCard'
 import BackgroundCircle from '@components/Circle/BackgroundCircle'
 import DotList from '@components/List/DotList'
-import { technologies } from '@data/experience'
+import { experiences } from '@data/experiences'
+import { technologies } from '@data/technology'
 
 type Props = {}
 
@@ -86,6 +88,20 @@ const Home = (props: Props) => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="flex flex-col items-center w-full gap-7">
+          <img
+            src={ExperienceImage.src}
+            className="w-[100px]"
+            alt="Worker experience image"
+          />
+          <h2 className="text-4xl font-semibold tracking-wide text-center drop-shadow-lg secondary-gradient font-lato ">
+            Experience
+          </h2>
+          {experiences.map((experience, index) => (
+            <JobCard key={'experience-index-' + index} {...experience} />
+          ))}
         </div>
       </div>
     </div>
