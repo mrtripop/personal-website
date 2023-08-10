@@ -14,7 +14,7 @@ export const metadata = {
   description:
     'Portfolio website to improve skill, collect knowledge, sharing profile, and make good opportunities',
   icons: {
-    icon: 'https://github.com/mrtripop/resume-website/blob/main/app/icon.ico',
+    icon: 'https://github.com/mrtripop/personal-website/blob/main/app/icon.ico',
   },
 }
 
@@ -34,11 +34,11 @@ export default function RootLayout({
         />
         <meta
           property="og:url"
-          content="https://mrtripop.github.io/resume-website"
+          content="https://mrtripop.github.io/personal-website"
         />
         <meta
           property="og:image"
-          content="https://github.com/mrtripop/resume-website/blob/main/assets/personal-image.png"
+          content="https://github.com/mrtripop/personal-website/blob/main/assets/personal-image.png"
         />
 
         <meta name="twitter:title" content="Mrtripop World Landing" />
@@ -48,7 +48,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://github.com/mrtripop/resume-website/blob/main/assets/personal-image.png"
+          content="https://github.com/mrtripop/personal-website/blob/main/assets/personal-image.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <title>Mrtripop</title>
