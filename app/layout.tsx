@@ -1,7 +1,6 @@
 import { Lato } from 'next/font/google'
 import Navbar from '@components/Navbar/Navbar'
 import Footer from '@components/Footer/Footer'
-import { PersonalMetaImage } from '@assets'
 
 import '@styles/global.css'
 
@@ -15,7 +14,7 @@ export const metadata = {
   description:
     'Portfolio website to improve skill, collect knowledge, sharing profile, and make good opportunities',
   icons: {
-    icon: '/icon.ico',
+    icon: 'https://github.com/mrtripop/resume-website/blob/main/app/icon.ico',
   },
 }
 
@@ -37,17 +36,22 @@ export default function RootLayout({
           property="og:url"
           content="https://mrtripop.github.io/resume-website"
         />
-        <meta property="og:image" content={PersonalMetaImage.src} />
+        <meta
+          property="og:image"
+          content="https://github.com/mrtripop/resume-website/blob/main/assets/personal-image.png"
+        />
 
         <meta name="twitter:title" content="Mrtripop World Landing" />
         <meta
           name="twitter:description"
           content="Portfolio website to improve skill, collect knowledge, sharing profile, and make good opportunities for me."
         />
-        <meta name="twitter:image" content={PersonalMetaImage.src} />
+        <meta
+          name="twitter:image"
+          content="https://github.com/mrtripop/resume-website/blob/main/assets/personal-image.png"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <title>Mrtripop</title>
-        <link rel="icon" href="/favicon.ico" sizes="96x96" />
       </head>
       <body className={lato.className}>
         <Navbar />
