@@ -1,13 +1,13 @@
 import React from 'react'
 
-type Props = {
-  technology?: string
+export type DotProps = {
+  text?: string
 }
 
-const DotList = (props: Props) => {
+const DotList = (props: DotProps) => {
   return (
-    <p className="font-light">
-      <span className="pr-2">&#x2022;</span> {props.technology}
+    <p className="flex flex-row text-sm font-light">
+      <span className="pr-2">&#x2022;</span> {props.text}
     </p>
   )
 }
