@@ -3,9 +3,9 @@ import React from 'react'
 import Image from 'next/image'
 import Button from '@components/Button/Button'
 import ExperienceCard from '@components/Card/ExperienceCard'
-import { PersonalImage, UniversityImage } from '@assets'
 import ContactCard from '@components/Card/ContactCard'
 import ImageButton from '@components/Button/IconsButton'
+import { images } from '@assets'
 import {
   contacts,
   experiences,
@@ -22,8 +22,8 @@ const About = (props: Props) => {
       <div id="about" className="bg-dark-blue ">
         <div className="container flex justify-between h-[1021px] ">
           <div className="flex-1 overflow-hidden ">
-            <Image
-              src={PersonalImage}
+            <img
+              src={images.PersonalImage.src}
               alt="mrtripop-personal-image"
               className="h-full w-fit pt-[64px]"
             />
@@ -55,7 +55,10 @@ const About = (props: Props) => {
             </p>
           </div>
           <div className="flex items-center">
-            <Image src={UniversityImage} alt="mrtripop-university-image" />
+            <img
+              src={images.UniversityImage.src}
+              alt="mrtripop-university-image"
+            />
           </div>
         </div>
       </div>
@@ -69,11 +72,11 @@ const About = (props: Props) => {
             </h2>
             <div className="flex flex-row gap-[39px] align-center justify-center">
               {programmingSkillLogo.map((logo, index) => (
-                <Image
+                <img
                   key={'mrtripop-skill-experience-' + index}
                   width={160}
                   height={160}
-                  src={logo}
+                  src={logo.src}
                   alt="mrtripop-skill-experience"
                 />
               ))}
