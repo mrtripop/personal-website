@@ -4,18 +4,16 @@ import Footer from '@components/Footer/Footer'
 
 import '@styles/global.css'
 
-const lato = Lato({
+const latoFont = Lato({
   weight: ['100', '300', '400', '700', '900'],
   subsets: ['latin'],
+  variable: '--font-lato',
 })
 
 export const metadata = {
   title: 'Mrtripop',
   description:
     'Portfolio website to improve skill, collect knowledge, sharing profile, and make good opportunities',
-  icons: {
-    icon: 'https://github.com/mrtripop/personal-website/blob/main/app/icon.ico',
-  },
 }
 
 export default function RootLayout({
@@ -38,7 +36,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://github.com/mrtripop/personal-website/blob/main/assets/personal-image.png"
+          content="https://raw.githubusercontent.com/mrtripop/personal-website/main/assets/personal-image.png"
         />
 
         <meta name="twitter:title" content="Mrtripop World Landing" />
@@ -48,12 +46,15 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://github.com/mrtripop/personal-website/blob/main/assets/personal-image.png"
+          content="https://raw.githubusercontent.com/mrtripop/personal-website/main/assets/personal-image.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
+
+        <link rel="icon" href="/icon.ico" sizes="any" />
+
         <title>Mrtripop</title>
       </head>
-      <body className={lato.className}>
+      <body className={latoFont.className}>
         <Navbar />
         <main className="scroll-smooth">{children}</main>
         <Footer />
