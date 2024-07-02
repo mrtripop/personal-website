@@ -1,23 +1,11 @@
-import {
-  GitLogoImage,
-  GithubLogo,
-  GmailLogo,
-  LinkedInLogo,
-  MediumLogo,
-  NextLogoImage,
-  PostgresLogoImage,
-  ReactLogoImage,
-  SmartDoorDesign,
-  SpringBootLogoImage,
-  WorkflowDesign,
-} from '@assets'
+import { images } from '@assets'
 
 export const programmingSkillLogo = [
-  NextLogoImage,
-  ReactLogoImage,
-  GitLogoImage,
-  SpringBootLogoImage,
-  PostgresLogoImage,
+  images.NextLogoImage,
+  images.ReactLogoImage,
+  images.GitLogoImage,
+  images.SpringBootLogoImage,
+  images.PostgresLogoImage,
 ]
 
 export const experiences = [
@@ -29,7 +17,7 @@ export const experiences = [
     onClick: () => {
       console.log('Software Engineer Click!')
     },
-    src: WorkflowDesign.src,
+    src: images.WorkflowDesign.src,
     alt: 'Mrtripop experience with Software Engineer',
   },
 
@@ -41,7 +29,7 @@ export const experiences = [
     onClick: () => {
       console.log('Computer Engineering Click!')
     },
-    src: SmartDoorDesign.src,
+    src: images.SmartDoorDesign.src,
     alt: 'Mrtripop experience with Computer Engineering',
   },
 ]
@@ -50,25 +38,25 @@ export const contacts = [
   {
     contact: 'tripop.chai12@gmail.com',
     textButton: 'Send Email',
-    src: GmailLogo.src,
+    src: images.GmailLogo.src,
     onClick: () => {},
   },
   {
     contact: 'Tripop Torcheep',
     textButton: 'View Profile',
-    src: LinkedInLogo.src,
+    src: images.LinkedInLogo.src,
     onClick: () => {},
   },
 ]
 
 export const follows = [
   {
-    src: GithubLogo.src,
+    src: images.GithubLogo.src,
     alt: 'mrtripop gmail contact',
     onClick: () => {},
   },
   {
-    src: MediumLogo.src,
+    src: images.MediumLogo.src,
     alt: 'mrtripop github contact',
     onClick: () => {},
   },

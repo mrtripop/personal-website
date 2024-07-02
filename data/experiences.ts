@@ -1,4 +1,5 @@
-import { BackendImage, FrontendImage, InternetOfThingImage } from '@assets'
+import { images } from '@assets'
+// import { BackendImage, FrontendImage, InternetOfThingImage } from '@assets'
 import { JobCardProps } from '@components/Card/Job/JobCard'
 
 export const experiences: JobCardProps[] = [
@@ -8,7 +9,7 @@ export const experiences: JobCardProps[] = [
     jobs: [
       {
         title: 'Backend Development',
-        image: BackendImage.src,
+        image: images.BackendImage.src,
         alt: 'Backend development image',
         contents: [
           'Utilized Java Spring Boot to build efficient and scalable RESTful APIs.',
@@ -18,7 +19,7 @@ export const experiences: JobCardProps[] = [
       },
       {
         title: 'Frontend Development',
-        image: FrontendImage.src,
+        image: images.FrontendImage.src,
         alt: 'Frontend development image',
         contents: [
           'Developed interactive and responsive user interfaces using React framework.',
@@ -34,7 +35,7 @@ export const experiences: JobCardProps[] = [
     jobs: [
       {
         title: 'Enhance the Smart Door Lock using IoT Technology',
-        image: InternetOfThingImage.src,
+        image: images.InternetOfThingImage.src,
         alt: 'Internet of thing development image',
         contents: [
           'Access control through key cards (default door lock method), key cards must still work well when modify Smart Door Lock.',

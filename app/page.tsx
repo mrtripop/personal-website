@@ -1,9 +1,10 @@
-import { ExperienceImage, LocationImage, TechStackImage } from '@assets'
 import JobCard from '@components/Card/Job/JobCard'
 import BackgroundCircle from '@components/Circle/BackgroundCircle'
 import DotList from '@components/List/DotList'
+
 import { experiences } from '@data/experiences'
 import { technologies } from '@data/technology'
+import { images } from '@assets'
 
 type Props = {}
 
@@ -45,7 +46,7 @@ const Home = (props: Props) => {
           </h1>
         </div>
         <div className="flex items-center gap-[0.5rem]">
-          <img src={LocationImage.src} alt="Location icon" />
+          <img src={images.LocationImage.src} alt="Location icon" />
           <h2 className="font-sans text-lg font-light text-center">
             Bangkok, Thailand
           </h2>
@@ -69,7 +70,7 @@ const Home = (props: Props) => {
 
         <div className="flex flex-col items-center w-full gap-7">
           <img
-            src={TechStackImage.src}
+            src={images.TechStackImage.src}
             className="w-[100px]"
             alt="Familiar with tech stack image"
           />
@@ -92,7 +93,7 @@ const Home = (props: Props) => {
 
         <div className="flex flex-col items-center w-full gap-7">
           <img
-            src={ExperienceImage.src}
+            src={images.ExperienceImage.src}
             className="w-[100px]"
             alt="Worker experience image"
           />
