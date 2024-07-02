@@ -26,6 +26,7 @@
     "@commitlint/cli": "^17.7.0",
     "@commitlint/config-conventional": "^17.7.0",
     "autoprefixer": "^10.4.14",
+    "caniuse-lite": "^1.0.30001639",
     "husky": "^8.0.3",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
