@@ -3,6 +3,7 @@ import Navbar from '@components/Navbar/Navbar'
 import Footer from '@components/Footer/Footer'
 
 import '@styles/global.css'
+import '@styles/global.scss'
 
 const latoFont = Lato({
   weight: ['100', '300', '400', '700', '900'],
