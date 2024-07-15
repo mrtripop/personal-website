@@ -4,6 +4,8 @@ import { AppWrap, MotionWrap } from '@components/Wrapper'
 import { motion } from 'framer-motion'
 import { images } from '@assets'
 
+import './Profile.scss'
+
 type Props = {}
 
 const scaleVariants = {
@@ -19,31 +21,23 @@ const scaleVariants = {
 
 const Profile = (props: Props) => {
   return (
-    <div className="flex-row flex-1 w-full h-full px-8 pt-24 pb-0 app__flex">
+    <div className='app__header app__flex'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
-        className="flex flex-[0.65] flex-col justify-start items-start h-full"
+        className='app__header-info'
       >
-        <div className="flex flex-col items-end justify-end w-full">
-          <div className="badge-cmp app__flex">
-            <span className="text-5xl">👋</span>
+        <div className='app__header-badge'>
+          <div className='badge-cmp app__flex'>
+            <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="text-sm leading-normal text-left text-new-gray">
-                Hello, I am
-              </p>
-              <h1 className="text-5xl font-extrabold text-center capitalize text-new-black">
-                Tripop
-              </h1>
+              <p className='p-text'>Hello, I am</p>
+              <h1 className='head-text'>Tripop</h1>
             </div>
           </div>
-          <div className="app__flex tag-cmp">
-            <p className="w-full text-right capitalize text-new-gray">
-              Backend Engineer
-            </p>
-            <p className="w-full text-right capitalize text-new-gray">
-              Frontend Engineer
-            </p>
+          <div className='tag-cmp app__flex'>
+            <p className='p-text'>Web Developer</p>
+            <p className='p-text'>Freelancer</p>
           </div>
         </div>
       </motion.div>
@@ -51,32 +45,26 @@ const Profile = (props: Props) => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__header-img"
+        className='app__header-img'
       >
-        <img
-          src={images.PersonalImage.src}
-          className="z-10 object-contain h-auto "
-          alt="profile_bg"
-        />
+        <img src={images.PersonalImage.src} alt='profile_bg' />
       </motion.div>
 
       <motion.div
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
+        className='app__header-circles'
       >
-        {[
-          images.SpringBootLogoImage,
-          images.ReactLogoImage,
-          images.PostgresLogoImage,
-        ].map((circle, index) => (
-          <div className="circle-cmp app__flex" key={`circle-${index}`}>
-            <img src={circle.src} alt="circle" className="w-[60%] h-[60%]" />
-          </div>
-        ))}
+        {[images.SpringBootLogoImage, images.ReactLogoImage, images.PostgresLogoImage].map(
+          (circle, index) => (
+            <div className='circle-cmp app__flex' key={`circle-${index}`}>
+              <img src={circle.src} alt='circle' />
+            </div>
+          ),
+        )}
       </motion.div>
     </div>
   )
 }
 
-export default AppWrap(Profile, 'profile')
+export default AppWrap(MotionWrap(Profile, 'profile'), 'home', 'home')
