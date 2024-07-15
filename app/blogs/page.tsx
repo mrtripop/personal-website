@@ -1,16 +1,15 @@
 'use client'
-import { About, Profile } from '@containers'
+import { About, Profile, Achievement, Skills, Contact } from '@containers'
 import React from 'react'
 
-import { AppWrap, MotionWrap } from '@components/Wrapper'
-
-type Props = {}
-
-const BlogPage = (props: Props) => {
+const BlogPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className='app'>
       <Profile />
-      {/* <About /> */}
+      <About />
+      <Achievement />
+      <Skills />
+      <Contact />
     </div>
   )
 }
