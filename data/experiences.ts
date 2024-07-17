@@ -5,7 +5,7 @@ import { JobCardProps } from '@components/Card/Job/JobCard'
 export const experiences: JobCardProps[] = [
   {
     role: 'Software Engineer',
-    location: 'At Qualint Co,.Ltd | 2022 - current',
+    location: 'At Qualint Co,.Ltd | 2022 - Present',
     jobs: [
       {
         title: 'Backend Development',
