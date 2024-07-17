@@ -1,0 +1,24 @@
+.app__footer {
+  height: 10rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  height: 4.25rem;
+  gap: 1rem;
+
+  div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  h4 {
+    color: white;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.065rem;
+    text-align: center;
+    font-family: var(--nunito-font);
+  }
+}
