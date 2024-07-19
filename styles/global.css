@@ -16,6 +16,26 @@
   --origin-secondary-color: #f29492;
   --origin-third-color: #2c3e50;
   --origin-fourth-color: #00dbde;
+  --origin-white-mill-color: #f6f6f6;
+  --origin-dark-blue-color: #002f47;
+  --origin-gray-color: #eceff1;
+  --origin-light-gray: #e4e4e4;
+  --origin-dark-blue-green-color: #114357;
+  --origin-mill-pink-color: #f29492;
+  --origin-pink-color: #fb00ff;
+
+  /* new color */
+  --new-black-color: #001011;
+  --new-black-night-color: #0a090c;
+  --new-gray-color: #757780;
+  --new-white-color: #fffffc;
+  --new-white-anti-flash-color: #f0edee;
+  --new-green-color: #07393c;
+  --new-blue-color: #003049;
+  --new-yellow-color: #fcbf49;
+  --new-orange-color: #f77f00;
+  --new-red-color: #d62828;
+  --new-vanilla-color: #eae2b7;
 }
 
 * {
@@ -50,9 +70,9 @@
 
 .secondary-gradient {
   background: linear-gradient(
-    150deg,
-    var(--origin-third-color) 0%,
-    var(--origin-fourth-color) 100%
+    160deg,
+    var(--origin-fourth-color) 70%,
+    var(--origin-third-color) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -60,10 +80,6 @@
 }
 
 .highlight-gradient {
-  background: linear-gradient(
-    135deg,
-    rgb(252, 0, 255, 0.12),
-    rgb(0, 219, 222, 0.12)
-  );
+  background: linear-gradient(135deg, rgb(252, 0, 255, 0.12), rgb(0, 219, 222, 0.12));
   box-shadow: 0px 2px 3px 0px rgba(var(--black-color), 0.12);
 }

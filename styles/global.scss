@@ -6,11 +6,15 @@
 }
 
 .app__whitebg {
-  background-color: var(--white-color);
+  background-color: var(--new-white-anti-flash-color);
 }
 
 .app__primarybg {
-  background-color: var(--primary-color);
+  background-color: var(--new-yellow-color);
+}
+
+.app__secondarybg {
+  background-color: var(--new-black-night-color);
 }
 
 .app__container {
