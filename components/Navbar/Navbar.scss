@@ -1,0 +1,39 @@
+@import 'mixins';
+
+.nav-bar {
+  --tw-backdrop-blur: blur(12px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 99999;
+  background-color: transparent;
+  opacity: 100%;
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
+    var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.nav-bar__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  div {
+    height: 45px;
+    width: 120px;
+    border-radius: 9999px;
+    background-color: var(--white-color);
+
+    h2 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+    }
+  }
+}
