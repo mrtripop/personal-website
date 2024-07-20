@@ -6,8 +6,6 @@ import { images } from '@assets'
 
 import './Profile.scss'
 
-type Props = {}
-
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -19,7 +17,7 @@ const scaleVariants = {
   },
 }
 
-const Profile = (props: Props) => {
+const Profile = () => {
   return (
     <div className='app__header app__flex'>
       <motion.div
@@ -36,8 +34,7 @@ const Profile = (props: Props) => {
             </div>
           </div>
           <div className='tag-cmp app__flex'>
-            <p className='p-text'>Web Developer</p>
-            <p className='p-text'>Freelancer</p>
+            <p className='p-text'>Full Stack Developer</p>
           </div>
         </div>
       </motion.div>
@@ -67,4 +64,4 @@ const Profile = (props: Props) => {
   )
 }
 
-export default AppWrap(MotionWrap(Profile, 'profile'), 'home', 'home')
+export default AppWrap(MotionWrap(Profile, 'profile'), 'home', 'app__primarybg')
